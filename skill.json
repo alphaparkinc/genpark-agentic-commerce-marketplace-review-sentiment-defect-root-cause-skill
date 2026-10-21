@@ -1,0 +1,61 @@
+{
+  "name": "genpark-agentic-commerce-marketplace-review-sentiment-defect-root-cause-skill",
+  "version": "1.0.0",
+  "title": "Marketplace Review NLP Sentiment & Defect Root-Cause Skill",
+  "description": "Negative customer review NLP defect clustering, return-to-vendor (RTV) cost attribution, and factory production quality feedback loop. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "agentic-commerce",
+  "topics": [
+    "review-analysis",
+    "defect-clustering",
+    "sentiment-nlp",
+    "quality-control",
+    "agentic-commerce",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "cluster_negative_review_defects",
+      "description": "Extract critical mechanical, packaging, or firmware defect patterns from customer 1-star reviews.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "reviews"
+        ]
+      }
+    },
+    {
+      "name": "generate_factory_capa_report",
+      "description": "Generate Corrective and Preventive Action (CAPA) ticket for supplier factory inspection.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "defect_category": {
+            "type": "string"
+          },
+          "defect_rate_pct": {
+            "type": "number"
+          },
+          "sku": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "defect_category",
+          "defect_rate_pct",
+          "sku"
+        ]
+      }
+    }
+  ]
+}
